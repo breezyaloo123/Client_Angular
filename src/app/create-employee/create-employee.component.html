@@ -1,0 +1,29 @@
+<!-- <p>create-employee works!</p> -->
+
+
+<h3>Ajouter un Produit</h3>
+<div [hidden]="submitted" style="width: 400px;">
+  <form (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="name">Nom</label>
+      <input type="text" class="form-control" id="nom" required [(ngModel)]="employee.nom" name="nom">
+    </div>
+
+    <div class="form-group">
+      <label for="name">Prix</label>
+      <input type="text" class="form-control" id="prix" required [(ngModel)]="employee.prix" name="prix">
+    </div>
+
+    <div class="form-group">
+      <label for="name">Quantite</label>
+      <input type="text" class="form-control" id="quantite" required [(ngModel)]="employee.quantite" name="quantite">
+    </div>
+
+    <button type="submit" class="btn btn-success">Submit</button>
+  </form>
+</div>
+
+<div [hidden]="!submitted">
+  <h4>Produit ajoute avec succes!!!</h4>
+  <!-- <button class="btn btn-success" (click)="newEmployee()">Add</button> -->
+</div>
